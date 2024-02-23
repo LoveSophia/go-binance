@@ -620,3 +620,13 @@ func (c *Client) NewOpenInterestStatisticsService() *OpenInterestStatisticsServi
 func (c *Client) NewLongShortRatioService() *LongShortRatioService {
 	return &LongShortRatioService{c: c}
 }
+
+// NewTopTraderLongShortAccountRatioService init Top Trader Long/Short Ratio (Accounts)
+func (c *Client) NewTopTraderLongShortAccountRatioService() *TopTraderLongShortAccountRatioService {
+	return &TopTraderLongShortAccountRatioService{BaseHoldDataService{c: c}}
+}
+
+// NewTopTraderLongShortPositionsRatioService init Top Trader Long/Short Ratio (Positions)
+func (c *Client) NewTopTraderLongShortPositionsRatioService() *TopTraderLongShortPositionsRatioService {
+	return &TopTraderLongShortPositionsRatioService{BaseHoldDataService{c: c}}
+}
